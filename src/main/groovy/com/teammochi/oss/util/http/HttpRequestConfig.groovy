@@ -1,4 +1,4 @@
-package com.teammochi.util.spock
+package com.teammochi.oss.util.http
 
 import groovy.transform.CompileStatic
 import org.apache.http.HttpResponse
@@ -32,6 +32,17 @@ class HttpRequestConfig {
         failureHandler = handler
     }
 
+    /**
+     * <pre>{@code
+     * get(...) {
+     *     onStatuses(
+     *          200: {resp -> println 'Success!'},
+     *          400: {resp -> println 'Failure!'}
+     *     )
+     * }
+     * }</pre>
+     * @param handlers
+     */
     void onStatuses(Map<Integer, Consumer<HttpResponse>> handlers) {
         responseHandlers.putAll(handlers)
     }

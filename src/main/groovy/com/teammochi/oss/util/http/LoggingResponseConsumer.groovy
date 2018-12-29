@@ -1,4 +1,4 @@
-package com.teammochi.util.spock
+package com.teammochi.oss.util.http
 
 import groovy.transform.CompileStatic
 import org.apache.http.HttpResponse

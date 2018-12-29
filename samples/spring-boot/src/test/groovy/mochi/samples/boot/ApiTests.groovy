@@ -1,6 +1,7 @@
 package mochi.samples.boot
 
-import com.teammochi.util.spock.HttpSpec
 
-class ApiTests extends HttpSpec{
+import com.teammochi.oss.util.http.HttpSpecification
+
+class ApiTests extends HttpSpecification{
 }
